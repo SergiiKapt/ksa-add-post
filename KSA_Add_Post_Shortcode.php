@@ -92,7 +92,7 @@ class KSA_Add_Post_Shortcode
             'post_status' => 'pending',
             'post_author' => get_current_user_id(),
         );
-
+        wp_insert_post($post_data);
     }
 
     public static function sendMAil($title, $text)
