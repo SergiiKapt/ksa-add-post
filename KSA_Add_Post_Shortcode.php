@@ -14,13 +14,6 @@ class KSA_Add_Post_Shortcode
     public static function ksa_add_post_form_shortcode()
     {
         if (is_user_logged_in()):
-
-            echo get_option('admin_email');
-            echo get_option('bloginfo');
-
-
-
-
             ?>
             <div id="ksa__addp" class="ksa__addp">
                 <div class="title__wrap">
@@ -45,10 +38,8 @@ class KSA_Add_Post_Shortcode
         endif;
     }
 
-    public
-    static function ksa_addp_custom_scripts()
+    public static function ksa_addp_custom_scripts()
     {
-
         wp_enqueue_script('ksa-addp-js', KSA_ADDP_P_URI . 'assets/js/ksa-addp.js', array('jquery'), null, true);
         wp_enqueue_style('ksa-addp-style', KSA_ADDP_P_URI . 'assets/css/style.css');
         wp_localize_script('ksa-addp-js', 'ksa_addp_data',
@@ -61,9 +52,7 @@ class KSA_Add_Post_Shortcode
         wp_register_script('ksa-addp-translate-js', plugins_url('/js/translate.js'), array('wp-i18n'));
     }
 
-
-    public
-    static function ksa_addp_translate()
+    public static function ksa_addp_translate()
     {
         $jsfile_url = plugins_url('/js/ksa-addp.js');
 
@@ -71,8 +60,7 @@ class KSA_Add_Post_Shortcode
         wp_set_script_translations('my-script', 'myl10n', plugins_url('/js/translate.js'));
     }
 
-    public
-    static function ksa_addp_submit_callback()
+    public static function ksa_addp_submit_callback()
     {
         if (is_user_logged_in()) {
 
@@ -96,8 +84,7 @@ class KSA_Add_Post_Shortcode
         die;
     }
 
-    public
-    static function createPost($data)
+    public static function createPost($data)
     {
         $post_data = array(
             'post_title' => sanitize_text_field($data['title']),
@@ -107,6 +94,7 @@ class KSA_Add_Post_Shortcode
         );
 
     }
+
     public static function sendMAil($title, $text)
     {
         $headers = "From: " . get_option('blogname') . "\r\n";
