@@ -1,0 +1,27 @@
+.ksa__addp {
+    position: relative;
+}
+
+.title {
+    font-size: 2rem;
+}
+.field__wrap {
+    margin-bottom: 10px;
+}
+.ksa__addp .label {
+    display: block;
+}
+
+.alert__msg {
+    padding: 20px;
+    margin: 0;
+    color: #222;
+}
+
+.alert__msg.success {
+    background: #8c9;
+}
+
+.alert__msg.error {
+    background: #f87;
+}
