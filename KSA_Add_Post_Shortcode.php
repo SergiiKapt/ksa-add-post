@@ -29,9 +29,7 @@ class KSA_Add_Post_Shortcode
                 <?php wp_nonce_field('ksa_addp_nonce'); ?>
                 <div class="field__wrap">
                     <label for="#ksa__addp__title" class="label label__title"><?php echo __('Title:') ?></label>
-                    <input id="ksa__addp__title" class="input__title" type="text" name="title"
-                           placeholder="Your Name"
-                           autocomplete="on" value="hh]/rt ' f">
+                    <input id="ksa__addp__title" class="input__title" type="text" name="title">
                 </div>
                 <div class="field__wrap">
                     <label for="#ksa__addp__text" class="label label__text"><?php echo __('Text:') ?></label>
