@@ -1,5 +1,5 @@
 {
-  "name": "ksask/ksa-add-post-shortcode",
+  "name": "ksask/ksa-add-post",
   "description": "Adding post from form shortcode",
   "license": "MIT",
   "authors": [
@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-0": {
-      "ksask\\KsaAddPostShortcode\\": "/"
+      "ksask\\KsaAddPost\\": "/"
     }
   }
 }
